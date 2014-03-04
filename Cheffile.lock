@@ -1,0 +1,35 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apt (2.3.8)
+    build-essential (1.4.4)
+    chef_gem (0.1.0)
+    runit (1.5.8)
+      build-essential (>= 0.0.0)
+      yum (~> 3.0)
+      yum-epel (>= 0.0.0)
+    yum (3.1.2)
+    yum-epel (0.3.4)
+      yum (~> 3.0)
+
+GIT
+  remote: https://github.com/fnichol/chef-git.git
+  ref: master
+  sha: 6c19cbefcdad5ec0f62a64dae1f656d660698ea3
+  specs:
+    git (0.9.0)
+      runit (>= 0.0.0)
+
+GIT
+  remote: https://github.com/fnichol/chef-rvm
+  ref: master
+  sha: 87f58d428c160337c1581ed1130a1a53d94e5126
+  specs:
+    rvm (0.9.1)
+      chef_gem (>= 0.0.0)
+
+DEPENDENCIES
+  apt (>= 0)
+  git (>= 0)
+  rvm (>= 0)
+
