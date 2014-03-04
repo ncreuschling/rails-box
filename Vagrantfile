@@ -79,8 +79,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
-    chef.roles_path = "roles"
-    chef.data_bags_path = "data_bags"
+    # chef.roles_path = "roles"
+    # chef.data_bags_path = "data_bags"
     chef.add_recipe "apt"
     chef.add_recipe "build-essential"
     chef.add_recipe "rvm::vagrant"
