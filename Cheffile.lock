@@ -2,13 +2,8 @@ SITE
   remote: http://community.opscode.com/api/v1
   specs:
     apt (2.3.10)
-    build-essential (2.0.0)
-    chef-client (3.4.0)
-      cron (>= 1.2.0)
-      logrotate (>= 1.2.0)
+    build-essential (2.0.2)
     chef_gem (0.1.0)
-    cron (1.3.12)
-    logrotate (1.5.0)
     runit (1.5.10)
       build-essential (>= 0.0.0)
       yum (~> 3.0)
@@ -35,7 +30,6 @@ GIT
 
 DEPENDENCIES
   apt (>= 0)
-  chef-client (>= 0)
   git (>= 0)
   rvm (>= 0)
 
