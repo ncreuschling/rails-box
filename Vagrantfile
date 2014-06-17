@@ -5,7 +5,16 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.omnibus.chef_version = :latest
+  if Vagrant.has_plugin?("vagrant-omnibus")
+    config.omnibus.chef_version = :latest
+  else
+    puts "Please install the vagrant-omnibus plugin (see https://github.com/schisamo/vagrant-omnibus)"
+  end
+
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.scope = :box
+    # config.cache.synced_folder_opts = { type: :nfs, mount_options: ['rw', 'vers=3', 'tcp', 'nolock'] }
+  end
 
   config.vm.box = "precise64"
 
